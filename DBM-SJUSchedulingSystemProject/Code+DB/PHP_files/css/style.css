@@ -1,0 +1,455 @@
+/*************** How to call CSS file in HTML:
+	**************<head>
+		**************<link rel="stylesheet" type="text/css" href="cssFileName.css">
+	**************</head>
+***************/
+
+/**************blackground color**************/
+body{
+    /*background-color: rgb(241, 239, 241);*/
+	background: #F5F5F5 url(../images/p5.jpg);
+	margin: 0;
+}
+
+
+
+/**************font style**************/
+@font-face {
+	font-family: 'OpenSansRegular';
+	src: url('../fonts/OpenSansRegular.eot');
+	src: local('OpenSansRegular'), url('../fonts/OpenSansRegular.woff') format('woff'), url('../fonts/OpenSansRegular.ttf') format('truetype');
+}
+
+
+
+/************** h1 header style **************/
+h1  {
+    color: black;
+    margin-left: 10px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	font:bold 200% 'OpenSansRegular';
+}
+
+
+
+/************** header 2 style  **************/
+h2 {
+	color: black;
+	margin-left: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	font:bold 100% 'OpenSansRegular';
+}
+
+
+p.errors {
+	color: rgb(142, 34, 34);
+	font-weight: bold;
+	margin-bottom: -1px;
+}
+
+
+p.notice {
+	color: rgb(17, 112, 91);
+	font-weight: bold;
+	margin-bottom: -1px;
+}
+
+/************** hints style  **************/
+label.small {
+	color: rgb(172, 25, 54);
+	font-size: 5px;
+	font: 10% 'OpenSansRegular';
+}
+
+
+/************** links format  **************/	
+/************** how to call in HTML: <a href="link.php">name</a> **************/ 
+a.singlelink:link {
+    color: black;
+	text-decoration: none;
+	font-weight: bold;
+	font:normal 100% 'OpenSansRegular';
+}
+a.singlelink:visited {
+    color: rgb(172, 25, 54); /*dark red*/
+	text-decoration: none;
+	font-weight: bold;
+	font:normal 100% 'OpenSansRegular';
+}
+a.singlelink:hover {
+    color: black;
+	text-decoration: underline;
+	font-weight: bold;
+	font:normal 100% 'OpenSansRegular';
+}
+a.singlelink:active {
+    color: black;
+	text-decoration: underline;
+	font-weight: bold;
+	font:normal 100% 'OpenSansRegular';
+}
+
+
+
+
+
+
+/**************Fixed top Navigation with dropdown menu **************/
+/************** how to call in HTML: <ul><li><a class = "active herf ="#link.php"> name</a></li><ul>> **************/ 
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(150, 192, 206); /*light blue*/
+	top: 0;
+	width: 100%;
+	font:normal 100% 'OpenSansRegular';
+}
+li {
+    float: left;
+	font:normal 100% 'OpenSansRegular';
+	border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+	border-right:1px solid #bbb;
+}
+
+li a{
+    display: block;
+    color: white;
+	font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font:normal 100% 'OpenSansRegular';
+}
+
+li a.welcome{
+    display: block;
+	background-color: rgb(246, 246, 246);
+    color: black;
+	font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font:bold 100% 'OpenSansRegular';
+}
+
+li a.welcome:hover:not(.active) {
+	background-color: rgb(246, 246, 246); /*light blue*/
+	color: black;
+	font: bold normal 100% 'OpenSansRegular';
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(37, 65, 94); /*dark blue*/
+	color: white;
+	font:normal 100% 'OpenSansRegular';
+}
+.active {
+    background-color: rgb(246, 246, 246); /*light gray*/
+	color: black;
+	font:normal 100% 'OpenSansRegular';
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/**************links style 2 **************/	
+/************** how to call in HTML: <a href="link.php">name</a> **************/ 
+a.singlelink2:link, a.singlelink2:visited {
+    background-color: rgb(68, 128, 191); /* blue*/
+    color: white;
+	font-weight: bold;
+	font:normal 100% 'OpenSansRegular';
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a.singlelink2:hover, a.singlelink2:active {
+    background-color: rgb(37, 65, 94); /*dark blue*/
+	font:normal 100% 'OpenSansRegular';
+}
+
+
+
+
+/**************Link style 3(looks like a button)**************/
+a.singlelink3:link, a.singlelink3:visited {
+    background-color: rgb(68, 128, 191); /* blue*/
+    color: white;
+	font-weight: bold;
+	font:normal 100% 'OpenSansRegular';
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	border-radius: 100px;
+}
+
+a.singlelink3:hover, a.singlelink3:active {
+    background-color: rgb(37, 65, 94); /*rgb(82, 85, 100); /*dark blue*/
+	font:normal 100% 'OpenSansRegular';
+}
+
+
+
+/**************Fix size link style 3**************/
+a.width-400px{
+    width: 400px;
+    display: inline-block;
+    /*margin-left: 10%;*/
+}
+
+
+
+
+
+
+/**************form style**************/
+input[type=text],[type=password], [type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: px 0;
+    display: inline-block;
+    border: 5px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font:normal 100% 'OpenSansRegular';
+}
+
+select {
+    width: 100%;
+    padding: 14px 20px;
+    border: 5px solid #ccc;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+	font:normal 100% 'OpenSansRegular';
+}
+
+option {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+	font:normal 100% 'OpenSansRegular';
+}
+
+input[type=file] {
+    width: 100%;
+    color: white;
+    margin: 8px 0;
+	border-radius: 4px;
+    cursor: pointer;
+	font:normal 100% 'OpenSansRegular';
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: rgb(68, 128, 191);  /*blue*/
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font:normal 100% 'OpenSansRegular';
+}
+input[type=submit]:hover {
+    background-color: rgb(37, 65, 94); /*rgb(82, 85, 100); /*dark blue*/
+	font:normal 100% 'OpenSansRegular';
+}
+
+
+
+/**************Div form style**************/
+div.formdiv{
+    border-radius: 10px;
+	border: 40px solid rgb(214, 215, 216);
+    background-color: rgb(214, 215, 216); /*Dark gray*/
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+    padding: 10px;
+	font:normal 100% 'OpenSansRegular';
+}
+
+/**************Div page style**************/
+div.pagediv{
+    /*border-radius: 5px;*/
+    background-color: rgb(246, 246, 246); /*light gray*/
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+    /*padding: 20px;*/
+	font:normal 100% 'OpenSansRegular';
+}
+
+
+
+/**************Button Style**************/
+button {
+	width: 100%;
+    background-color: rgb(68, 128, 191);  /*blue*/
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font:bold 100% 'OpenSansRegular';
+
+}
+button:hover {
+  background-color: rgb(37, 65, 94);  /*blue*/
+  font:bold 100% 'OpenSansRegular';
+}
+
+/**************list design**************/
+ol {
+    padding: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: auto;
+    font:bold 'OpenSansRegular';
+
+}
+ol li {
+    padding: 10px;
+    margin-left: 40px;
+    font:bold 'OpenSansRegular';
+}
+ul {
+    background: rgb(246, 246, 246); /*gray*/
+    /*padding: 5px;*/
+}
+ul li {
+    background: rgb(68, 128, 191); /*rgb(116, 130, 143); /*blue*/
+    /*margin: 5px;*/
+}
+
+
+
+/**************footer**************/
+footer {
+ /* margin-top: 1px;
+  padding: 20px 0 5px 0;
+  text-align: center; 
+  border-top: 1px solid #eaeaea;
+  color: #777;*/
+  width: 100%;
+  font: normal 100% 'News Cycle',  arial, sans-serif;
+  height: 20px;
+  padding: 20px 0 5px 0;
+  color: #222;
+  background: #D4D4D4;
+}
+footer a {
+  color: #555;
+  float: center;
+}
+footer a:hover {
+  color: #222;
+}
+footer small {
+  /*float: center;*/
+  margin-left: 30px;
+}
+footer ul {
+  float: right;
+  list-style: none;
+}
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+/**************Table style**************/
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+th, td {
+    text-align: center;
+    /*padding: 8px;*/
+}
+tr:nth-child(even){
+    background-color: white;
+}
+th {
+    background-color: rgb(37, 65, 94); /*rgb(82, 85, 100);/*dark blue*/
+    text-align: center;
+    color: white;
+}
+
+
+/************** Full-height Fixed Vertical Navbar **************/
+/************** how to call in HTML: <ul><li><a class = "active herf ="#link.php"> name</a></li><ul>> **************/ 
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+	font: 'OpenSansRegular';
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+	font: 'OpenSansRegular';
+}
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+	font: 'OpenSansRegular';
+}
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+	font: 'OpenSansRegular';
+}
+*/
